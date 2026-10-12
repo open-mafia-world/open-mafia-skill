@@ -1,0 +1,216 @@
+{
+  "general": {
+    "start_rating": 1000,
+    "players_count": 10
+  },
+  "combine": {
+    "win_normal_floor_enabled": true,
+    "win_normal_ceiling_enabled": true,
+    "role_weights": {
+      "don": 1.0,
+      "mafia": 1.0,
+      "sheriff": 1.0,
+      "civilian": 1.0
+    }
+  },
+  "contribution": {
+    "rating_scale": 2400,
+    "baseline": 0.5,
+    "k": 6,
+    "volatility": {
+      "min": 0.25,
+      "max": 1.5,
+      "scale": 125
+    },
+    "smoothing": {
+      "gap_scale": 75,
+      "trend_weight": 0.4,
+      "delta_scale": 15,
+      "dv_max": 5,
+      "dir_match_required": false
+    },
+    "trend_bound": 250,
+    "model_settings": {
+      "iMafia_v1": {
+        "overrides": [
+          {
+            "version": "1",
+            "date_from": "0000-01-01",
+            "entropy_power": 0.6,
+            "group_power": 0.3,
+            "normal_game_boundary": 0,
+            "contribution_gain": 1,
+            "broken_game_threshold": -2,
+            "broken_game_penalty": -10
+          }
+        ]
+      },
+      "FIIM_v1": {
+        "overrides": [
+          {
+            "version": "1",
+            "date_from": "0000-01-01",
+            "date_to": "2017-12-31",
+            "entropy_power": 0.6,
+            "group_power": 0.3,
+            "normal_game_boundary": 0,
+            "contribution_gain": 1,
+            "broken_game_threshold": -1,
+            "broken_game_penalty": -10
+          },
+          {
+            "version": "2",
+            "date_from": "2018-01-01",
+            "date_to": "2022-12-31",
+            "normal_game_boundary": 0,
+            "broken_game_threshold": -1,
+            "broken_game_penalty": -10
+          },
+          {
+            "version": "3",
+            "date_from": "2023-01-01",
+            "date_to": "2024-01-31",
+            "entropy_power": 0.6,
+            "group_power": 0.3,
+            "normal_game_boundary": 0,
+            "contribution_gain": 1,
+            "broken_game_threshold": -1,
+            "broken_game_penalty": -10
+          },
+          {
+            "version": "4",
+            "date_from": "2024-02-01",
+            "entropy_power": 0.6,
+            "group_power": 0.3,
+            "normal_game_boundary": 0,
+            "contribution_gain": 1,
+            "broken_game_threshold": -1,
+            "broken_game_penalty": -10
+          }
+        ]
+      },
+      "EG_v1": {
+        "overrides": [
+          {
+            "version": "1",
+            "date_from": "0000-01-01",
+            "entropy_power": 0.6,
+            "group_power": 0.3,
+            "normal_game_boundary": 0,
+            "contribution_gain": 1,
+            "broken_game_threshold": -1,
+            "broken_game_penalty": -10
+          }
+        ]
+      },
+      "CLM_v1": {
+        "overrides": [
+          {
+            "version": "1",
+            "date_from": "0000-01-01",
+            "entropy_power": 0.6,
+            "group_power": 0.3,
+            "normal_game_boundary": 0,
+            "contribution_gain": 1,
+            "broken_game_threshold": -0.7,
+            "broken_game_penalty": -10
+          }
+        ]
+      },
+      "MafGame_v1": {
+        "overrides": [
+          {
+            "version": "1",
+            "date_from": "0000-01-01",
+            "entropy_power": 0.6,
+            "group_power": 0.3,
+            "normal_game_boundary": 0,
+            "contribution_gain": 1,
+            "broken_game_threshold": -0.75,
+            "broken_game_penalty": -10
+          }
+        ]
+      },
+      "default": {
+        "overrides": [
+          {
+            "version": "1",
+            "date_from": "0000-01-01",
+            "entropy_power": 0.6,
+            "group_power": 0.3,
+            "normal_game_boundary": 0,
+            "contribution_gain": 1
+          }
+        ]
+      }
+    },
+    "table_strength_eps": 900
+  },
+  "win": {
+    "rating_scale": 800,
+    "k": 6,
+    "window_size": {
+      "no_fk": 100,
+      "fk_sheriff": 100,
+      "fk_other": 1000
+    },
+    "lambda_pair": 0.25,
+    "lambda_team": 0.5,
+    "volatility_player": {
+      "min": 0.5,
+      "max": 1.5,
+      "scale": 250
+    },
+    "smoothing": {
+      "gap_scale": 75,
+      "trend_weight": 0.4,
+      "delta_scale": 15,
+      "dv_max": 5
+    },
+    "trend_bound": 250,
+    "table_strength_eps": 900
+  },
+  "shared": {
+    "first_killed_factor": 0.5
+  },
+  "default_start_rating": {
+    "contribution_civilian": 1000,
+    "contribution_sheriff": 1000,
+    "contribution_mafia": 1000,
+    "contribution_don": 1000,
+    "contribution_trend_civilian": 1000,
+    "contribution_trend_sheriff": 1000,
+    "contribution_trend_mafia": 1000,
+    "contribution_trend_don": 1000,
+    "win_civilian": 1000,
+    "win_sheriff": 1000,
+    "win_mafia": 1000,
+    "win_don": 1000,
+    "win_trend_civilian": 1000,
+    "win_trend_sheriff": 1000,
+    "win_trend_mafia": 1000,
+    "win_trend_don": 1000,
+    "role_civilian": 1000,
+    "role_sheriff": 1000,
+    "role_mafia": 1000,
+    "role_don": 1000,
+    "overall": 1000,
+    "peak_overall": 1000,
+    "win_overall": 1000,
+    "peak_win_overall": 1000,
+    "peak_win_don": 1000,
+    "peak_win_mafia": 1000,
+    "peak_win_sheriff": 1000,
+    "peak_win_civilian": 1000,
+    "contribution_overall": 1000,
+    "peak_contribution_overall": 1000,
+    "peak_contribution_don": 1000,
+    "peak_contribution_mafia": 1000,
+    "peak_contribution_sheriff": 1000,
+    "peak_contribution_civilian": 1000,
+    "peak_role_don": 1000,
+    "peak_role_mafia": 1000,
+    "peak_role_sheriff": 1000,
+    "peak_role_civilian": 1000
+  }
+}
